@@ -67,3 +67,24 @@ chmod u+x ./bin/install_terraform_cli.sh
 ```
 ### [Github Lifecycle](https://www.gitpod.io/docs/configure/workspaces/tasks)
 Gitpod Tasks and Consideration about how init and before parameter work
+
+### [Env Vars](https://www.cyberciti.biz/faq/set-environment-variable-linux/)
+
+- Set Env Vars
+```sh
+$ export PROJECT_ROOT='/opt'
+$ echo $PROJECT_ROOT
+/opt
+$
+```
+- Unset Env Vars
+```sh
+$ unset PROJECT_ROOT
+$ echo $PROJECT_ROOT
+$ 
+```
+
+#### Persist env vars in Gitpod - Globally in next launched workspace
+```sh
+gp env HELLO='world'
+```
