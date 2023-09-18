@@ -88,3 +88,18 @@ $
 ```sh
 gp env HELLO='world'
 ```
+
+### AWS CLI Installation
+
+https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
+
+[`./bin/install_aws_cli`](./bin/install_aws_cli)
+
+- Check if AWS Credentials is configured
+```sh
+$ aws sts get-caller-identity
+```
+
+#### Environment variables to configure the AWS CLI
+
+https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html
