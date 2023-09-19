@@ -99,7 +99,23 @@ https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 ```sh
 $ aws sts get-caller-identity
 ```
-
+# 5
 #### Environment variables to configure the AWS CLI
-
 https://docs.aws.amazon.com/cli/latest/userguide/cli-configure-envvars.html
+## Terraform Registry Provider
+https://registry.terraform.io/browse/providers
+## Terraform Output
+https://developer.hashicorp.com/terraform/language/values/outputs
+### Random Provider
+https://registry.terraform.io/providers/hashicorp/random/latest/docs
+#### Random String
+https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string
+```sh
+terraform init
+terraform plan
+terraform apply
+```
+- For yes prompt / automatically approve
+```sh
+terraform apply --auto-approve
+```
