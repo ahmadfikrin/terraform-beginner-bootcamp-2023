@@ -111,6 +111,7 @@ https://registry.terraform.io/providers/hashicorp/random/latest/docs
 #### Random String
 https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/string
 ```sh
+terraform validate
 terraform init
 terraform plan
 terraform apply
@@ -119,3 +120,14 @@ terraform apply
 ```sh
 terraform apply --auto-approve
 ```
+
+# 6
+## Terraform extension in vscode
+## Terraform AWS Provider - AWS S3 Bucket
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
+## After add aws provider
+```sh
+terraform init -upgrade
+```
+## AWS Bucket Naming Rules
+https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html
