@@ -131,3 +131,23 @@ terraform init -upgrade
 ```
 ## AWS Bucket Naming Rules
 https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html
+
+# 7 Terraform Cloud
+## Terraform Backend Remote
+https://developer.hashicorp.com/terraform/language/settings/backends/remote
+## Migrate local terraform state to cloud
+https://developer.hashicorp.com/terraform/tutorials/cloud/cloud-migrate
+## Create Token
+https://app.terraform.io/app/settings/tokens?source=terraform-login
+```sh
+terraform login
+```
+```sh
+touch /home/gitpod/.terraform.d/credentials.tfrc.json
+```
+```sh
+open  /home/gitpod/.terraform.d/credentials.tfrc.json
+```
+```sh
+terraform init
+```
