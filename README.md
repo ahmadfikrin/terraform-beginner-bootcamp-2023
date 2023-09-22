@@ -163,3 +163,6 @@ export TERRAFORM_CLOUD_TOKEN='xxx'
 ./bin/generate_tfrc_credentials.sh
 terraform init
 ```
+
+# 9
+## Create alias in ~/.bash_profile
