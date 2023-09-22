@@ -93,7 +93,7 @@ gp env HELLO='world'
 
 https://docs.aws.amazon.com/cli/latest/userguide/getting-started-install.html
 
-[`./bin/install_aws_cli`](./bin/install_aws_cli)
+[`./bin/install_aws_cli.sh`](./bin/install_aws_cli.sh)
 
 - Check if AWS Credentials is configured
 ```sh
@@ -149,5 +149,17 @@ touch /home/gitpod/.terraform.d/credentials.tfrc.json
 open  /home/gitpod/.terraform.d/credentials.tfrc.json
 ```
 ```sh
+terraform init
+```
+
+# 8 
+## Create generate_tfrc_credentials.sh
+[`./bin/generate_tfrc_credentials.sh`](./bin/generate_tfrc_credentials.sh)
+
+## 
+```sh
+gp env TERRAFORM_CLOUD_TOKEN='xxx'
+export TERRAFORM_CLOUD_TOKEN='xxx'
+./bin/generate_tfrc_credentials.sh
 terraform init
 ```
