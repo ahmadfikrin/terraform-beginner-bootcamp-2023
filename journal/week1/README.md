@@ -38,3 +38,26 @@ terraform import random_string.bucket_name existing-bucket-name
 - comment random bucket name
 - update outputs.tf
 - update terraform.tfvars
+
+# 1.3.0 Create Terrahouse Module
+https://developer.hashicorp.com/terraform/language/modules/sources
+## Terraform Module Structure
+Place modules in a `modules` directory
+
+## Passing Input Variables
+
+variables moved to `./modules/terrahouse_aws`
+
+```tf
+module "terrahouse_aws" {
+  source = "./modules/terrahouse_aws"
+  user_uuid = var.user_uuid
+  bucket_name = var.bucket_name
+}
+```
+
+## Fix using Terraform refresh
+
+```sh
+terraform apply -refresh-only --auto-approve
+```
