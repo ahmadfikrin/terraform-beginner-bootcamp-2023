@@ -68,3 +68,28 @@ https://developer.hashicorp.com/terraform/language/functions/filemd5
 
 ## Path
 https://developer.hashicorp.com/terraform/language/expressions/references#filesystem-and-workspace-info
+
+# 1.5.0
+
+## CDN
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudfront_distribution
+
+## Cloudfront Origin Access Control
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/cloudfront_origin_access_control
+
+## Bucket Policy
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket_policy
+
+## AWS Cloudfront OAC
+https://aws.amazon.com/blogs/networking-and-content-delivery/amazon-cloudfront-introduces-origin-access-control-oac/
+
+## Data Sources
+https://developer.hashicorp.com/terraform/language/data-sources
+
+## Data Sources Caller Identity
+https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/caller_identity
+
+## Locals
+https://developer.hashicorp.com/terraform/language/values/locals
+
+## Create Invalidation
