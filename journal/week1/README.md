@@ -61,3 +61,10 @@ module "terrahouse_aws" {
 ```sh
 terraform apply -refresh-only --auto-approve
 ```
+# 1.4.0
+
+## File MD5
+https://developer.hashicorp.com/terraform/language/functions/filemd5
+
+## Path
+https://developer.hashicorp.com/terraform/language/expressions/references#filesystem-and-workspace-info
