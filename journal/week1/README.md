@@ -104,3 +104,17 @@ https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle
 
 ## Data Source
 https://developer.hashicorp.com/terraform/language/resources/terraform-data
+
+# 1.7.0
+
+## terraform_data
+https://developer.hashicorp.com/terraform/language/expressions/strings#heredoc-strings
+
+## Provisioners
+https://developer.hashicorp.com/terraform/language/resources/provisioners/syntax
+
+## Local - exec
+https://developer.hashicorp.com/terraform/language/resources/provisioners/local-exec
+
+## Remote - exec
+https://developer.hashicorp.com/terraform/language/resources/provisioners/remote-exec
