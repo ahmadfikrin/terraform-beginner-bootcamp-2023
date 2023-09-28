@@ -93,3 +93,14 @@ https://registry.terraform.io/providers/hashicorp/aws/latest/docs/data-sources/c
 https://developer.hashicorp.com/terraform/language/values/locals
 
 ## Create Invalidation
+
+# 1.6.0
+
+## Manage resource lifecycle
+https://developer.hashicorp.com/terraform/tutorials/state/resource-lifecycle
+
+## Lifecycle Meta-Argument
+https://developer.hashicorp.com/terraform/language/meta-arguments/lifecycle
+
+## Data Source
+https://developer.hashicorp.com/terraform/language/resources/terraform-data
