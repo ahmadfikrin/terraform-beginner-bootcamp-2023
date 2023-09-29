@@ -2,4 +2,5 @@ user_uuid="0985c323-ecc4-4ddd-8daf-e2079054f8af"
 bucket_name="fikri-bucket-name"
 index_html_filepath="/workspace/terraform-beginner-bootcamp-2023/public/index.html"
 error_html_filepath="/workspace/terraform-beginner-bootcamp-2023/public/error.html"
-content_version=3
+content_version=1
+assets_path="/workspace/terraform-beginner-bootcamp-2023/public/assets"
