@@ -118,3 +118,36 @@ https://developer.hashicorp.com/terraform/language/resources/provisioners/local-
 
 ## Remote - exec
 https://developer.hashicorp.com/terraform/language/resources/provisioners/remote-exec
+
+# 1.8.0
+
+## http-server
+https://www.npmjs.com/package/http-server
+
+##
+```sh
+tf console
+```
+```sh
+> fileset("${path.root}/public/assets","*")
+toset([
+  "dt.jpg",
+  "ot.jpg",
+])
+>  
+```
+or
+```sh
+> fileset("${path.root}/public/assets","*.{jpg,png,gif}")
+toset([
+  "dt.jpg",
+  "ot.jpg",
+])
+>  
+```
+
+## list tf
+https://developer.hashicorp.com/terraform/language/functions/list
+
+## for each tf
+https://developer.hashicorp.com/terraform/language/meta-arguments/for_each
