@@ -89,7 +89,7 @@ class TerraTownsMockServer < Sinatra::Base
     # Validate payload data
     name = payload["name"]
     description = payload["description"]
-    
+    domain_name = payload["domain_name"]    
     content_version = payload["content_version"]
     town = payload["town"]
 
