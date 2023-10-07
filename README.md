@@ -11,3 +11,6 @@
 
 ### [Week 1](journal/week1/README.md)
 - [Journal Version and Major Version](journal/week1/README.md/#journal-toc-and-major-version-1)
+
+### [Week 2](journa;/week2/README.md)
+- [2.0.0](journal/week2/README.md/#200)
