@@ -4,10 +4,10 @@ package main
 
 // fmt is short format, it contains functions for formatted I/O.
 import (
-	"bytes"
+	"bytes" //2.4.0
 	"context" //2.3.0
-	"encoding/json"
-	"net/http"
+	"encoding/json" //2.4.0
+	"net/http" //2.4.0
 	"log" //2.3.0
 	"fmt"
 	"github.com/google/uuid" //2.3.0
@@ -96,7 +96,7 @@ func Resource() *schema.Resource {
 		ReadContext: resourceHouseRead,
 		UpdateContext: resourceHouseUpdate,
 		DeleteContext: resourceHouseDelete,
-		Schema: map[string]*schema.Schema{
+		Schema: map[string]*schema.Schema{ //2.4.0
 			"name": {
 				Type: schema.TypeString,
 				Required: true,
@@ -128,7 +128,7 @@ func Resource() *schema.Resource {
 	return resource
 }
 
-func resourceHouseCreate(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
+func resourceHouseCreate(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics { //2.4.0
 	log.Print("resourceHouseCreate:start")
 	var diags diag.Diagnostics
 
@@ -187,7 +187,7 @@ func resourceHouseCreate(ctx context.Context, d *schema.ResourceData, m interfac
 	return diags
 }
 
-func resourceHouseRead(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
+func resourceHouseRead(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics { //2.4.0
 	log.Print("resourceHouseRead:start")
 	var diags diag.Diagnostics
 
@@ -237,7 +237,7 @@ func resourceHouseRead(ctx context.Context, d *schema.ResourceData, m interface{
 	return diags
 }
 
-func resourceHouseUpdate(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
+func resourceHouseUpdate(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics { //2.4.0
 	log.Print("resourceHouseUpdate:start")
 	var diags diag.Diagnostics
 
@@ -288,7 +288,7 @@ func resourceHouseUpdate(ctx context.Context, d *schema.ResourceData, m interfac
 	return diags
 }
 
-func resourceHouseDelete(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics {
+func resourceHouseDelete(ctx context.Context, d *schema.ResourceData, m interface{}) diag.Diagnostics { //2.4.0
 	log.Print("resourceHouseDelete:start")
 	var diags diag.Diagnostics
 
