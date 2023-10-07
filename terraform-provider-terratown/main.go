@@ -5,13 +5,13 @@ package main
 // fmt is short format, it contains functions for formatted I/O.
 import (
 	"bytes"
-	"context"
+	"context" //2.3.0
 	"encoding/json"
 	"net/http"
-	"log"
+	"log" //2.3.0
 	"fmt"
-	"github.com/google/uuid"
-	"github.com/hashicorp/terraform-plugin-sdk/v2/diag"
+	"github.com/google/uuid" //2.3.0
+	"github.com/hashicorp/terraform-plugin-sdk/v2/diag" //2.3.0
 	"github.com/hashicorp/terraform-plugin-sdk/v2/helper/schema"
 	"github.com/hashicorp/terraform-plugin-sdk/v2/plugin"
 )
@@ -26,7 +26,7 @@ func main() {
 	fmt.Println("Hello, world!")
 }
 
-type Config struct {
+type Config struct { //2.3.0
 	Endpoint string
 	Token string
 	UserUuid string
@@ -62,11 +62,11 @@ func Provider() *schema.Provider {
 			},
 		},
 	}
-	p.ConfigureContextFunc = providerConfigure(p)
+	p.ConfigureContextFunc = providerConfigure(p) //2.3.0
 	return p
 }
 
-func validateUUID(v interface{}, k string) (ws []string, errors []error) {
+func validateUUID(v interface{}, k string) (ws []string, errors []error) { //2.3.0
 	log.Print("validateUUID:start")
 	value := v.(string)
 	if _, err := uuid.Parse(value); err != nil {
