@@ -5,6 +5,13 @@ terraform {
       version = "1.0.0"
     }
   }
+
+  cloud {
+    organization = "ahmadfikrin"
+    workspaces {
+      name = "terra-house-1"
+    }
+  }
 # resource "random_string" "bucket_name" {
 #   lower = true
 #   upper = false
@@ -22,29 +29,49 @@ terraform {
 # }
 }
 
+
+
 provider "terratowns" {
   endpoint = var.terratowns_endpoint
   user_uuid = var.teacherseat_user_uuid
   token = var.tttoken
 }
 
-module "terrahouse_aws" {
-    source = "./modules/terrahouse_aws"
+module "home_overthrow_hosting" {
+    source = "./modules/terrahome_aws"
     user_uuid = var.teacherseat_user_uuid
-    index_html_filepath = var.index_html_filepath
-    error_html_filepath = var.error_html_filepath
-    content_version = var.content_version
-    assets_path = var.assets_path
+    public_path = var.overthrow.public_path
+    content_version = var.overthrow.content_version
 }
 
-resource "terratowns_home" "home" {
+resource "terratowns_home" "home_overthrow" {
   name = "Let's play Overthrow - Dota 2 Arcade / Custom Game"
   description = <<DESCRIPTION
 Overthrow is a ten-player custom game with four different map settings. 
 It is the first official custom game made by Valve.
 DESCRIPTION
-  domain_name = module.terrahouse_aws.cloudfront_url
+  domain_name = module.home_overthrow_hosting.domain_name
   # domain_name = "3fdq3gz.cloudfront.net"
-  town = "missingo"
-  content_version = 1
+  town = "gamers-grotto"
+  content_version = var.overthrow.content_version
+}
+
+module "home_friedrice_hosting" {
+    source = "./modules/terrahome_aws"
+    user_uuid = var.teacherseat_user_uuid
+    public_path = var.friedrice.public_path
+    content_version = var.friedrice.content_version
+}
+
+resource "terratowns_home" "home_friedrice" {
+  name = "Making Indonesia Fried Rice"
+  description = <<DESCRIPTION
+Nasi goreng, which literally translates to "fried rice," is a staple dish in Indonesia. 
+There are many variations of nasi goreng, each with slight differences based on region and personal preference. 
+Here's a basic recipe for Indonesian Nasi Goreng
+DESCRIPTION
+  domain_name = module.home_friedrice_hosting.domain_name
+  # domain_name = "3fdq3gz.cloudfront.net"
+  town = "cooker-cove"
+  content_version = var.friedrice.content_version
 }

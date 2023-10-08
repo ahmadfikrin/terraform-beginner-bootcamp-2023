@@ -8,6 +8,7 @@ tasks:
       source ./bin/install_terraform_cli.sh 
       source ./bin/generate_tfrc_credentials.sh
       cp $PROJECT_ROOT/terraform.tfvars_example $PROJECT_ROOT/terraform.tfvars
+      source ./bin/build_provider
   - name: sinatra
     init: | 
       cd $PROJECT_ROOT
