@@ -1,8 +1,4 @@
-variable "user_uuid" {
-  type = string
-}
-
-variable "bucket_name" {
+variable "teacherseat_user_uuid" {
   type = string
 }
 
@@ -19,5 +15,13 @@ variable "content_version" {
 }
 
 variable "assets_path" {
+  type = string
+}
+
+variable "terratowns_endpoint" {
+  type = string
+}
+
+variable "tttoken" {
   type = string
 }

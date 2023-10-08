@@ -1,15 +1,16 @@
+locals {
+  s3_origin_id = "MyS3Origin"
+}
+
 resource "aws_cloudfront_origin_access_control" "default" {
-  name                              = "OAC ${var.bucket_name}"
-  description                       = "OAC Policy website host ${var.bucket_name}"
+  name                              = "OAC ${aws_s3_bucket.website_bucket.bucket}"
+  description                       = "Origin Access Controls for Static Website Hosting ${aws_s3_bucket.website_bucket.bucket}"
   origin_access_control_origin_type = "s3"
   signing_behavior                  = "always"
   signing_protocol                  = "sigv4"
 
 }
 
-locals {
-  s3_origin_id = "MyS3Origin"
-}
 resource "aws_cloudfront_distribution" "s3_distribution" {
   origin {
     domain_name              = aws_s3_bucket.website_bucket.bucket_regional_domain_name
@@ -19,7 +20,7 @@ resource "aws_cloudfront_distribution" "s3_distribution" {
 
   enabled             = true
   is_ipv6_enabled     = true
-  comment             = "This is the static web host ${var.bucket_name}"
+  comment             = "This is the static web host ${aws_s3_bucket.website_bucket.bucket}"
   default_root_object = "index.html"
 
   #aliases = ["mysite.example.com", "yoursite.example.com"]
